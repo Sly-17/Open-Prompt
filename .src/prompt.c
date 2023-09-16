@@ -54,7 +54,6 @@ int main(int argc, char * argv[]) {
 
   printf("\n");
 
-  free(response_data.data);
   curl_easy_cleanup(curl);
 
   return 0;
