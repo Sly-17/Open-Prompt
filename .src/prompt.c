@@ -41,7 +41,7 @@ int main(int argc, char * argv[]) {
   if(!curl) error_and_exit("Failed to initialize libcurl");
 
   const char * url = "https://www.llama2.ai/api";
-  const char * json_data = "\"systemPrompt\" : \"You are a helpful assistant.\", \"temperature\" : 0.75, \"topP\" : 0.9, \"maxTokens\" : 500, \"version\ " : \"2796ee9483c3fd7aa2e171d38f4ca12251a30609463dcfd4cd76703f22e96cdf\"";
+  const char * json_data = "\"systemPrompt\" : \"You are a helpful assistant.\", \"temperature\" : 0.75, \"topP\" : 0.9, \"maxTokens\" : 500, \"version\" : \"2796ee9483c3fd7aa2e171d38f4ca12251a30609463dcfd4cd76703f22e96cdf\"";
 
   char post_data[1024 * 7] = {0};
   sprintf(post_data, "{%s, \"prompt\" : \"%s\"}", json_data, argv[1]);
